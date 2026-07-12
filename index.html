@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Portfolio | Nabil Arash</title>
+    <title>Nabil Arash | Visual Communication Designer Portfolio</title>
+    <meta name="description" content="Portfolio seni reka bentuk komunikasi visual, reka bentuk media baharu, dan pembangunan UI/UX oleh Nabil Arash Bin Rahim.">
     <link rel="icon" type="image/x-icon" href="/images/iconweb.png">
 
     <!-- Bootstrap 5.3.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <!-- Font Awesome 6 (Moden) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <!-- Pautan Fail CSS Luaran -->
     <link rel="stylesheet" href="style.css" />
     
     <style>
-        /* Gaya Khusus untuk Memperkasakan Struktur Landing Page */
         html {
-            scroll-behavior: smooth; /* Smooth scroll asli untuk semua pelayar */
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
         body {
-            font-family: 'Mendoza', system-ui, -apple-system, sans-serif;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
             color: #2D3748;
             background-color: #ffffff;
         }
@@ -35,86 +36,97 @@
         }
         .card-modern {
             border: none;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.04);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             background: #ffffff;
             height: 100%;
         }
         .card-modern:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
         }
         .resume-img {
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
         .desc-text {
-            font-size: 0.9rem;
-            color: #6c757d;
+            font-size: 0.925rem;
+            color: #555e6b;
             line-height: 1.6;
-            text-align: justify;
+        }
+        .tech-badge {
+            background-color: #f1f3f5;
+            color: #495057;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 4px;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. NAVIGATION BAR (Semua pautan menghala ke ID bahagian (#)) -->
+    <!-- 1. NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-modern"> 
       <div class="container"> 
-        <a class="navbar-brand fw-bold" href="#home">NabilArash.</a> 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> 
+        <a class="navbar-brand fw-bold fs-4" href="#home">NabilArash.</a> 
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> 
           <span class="navbar-toggler-icon"></span> 
         </button> 
         <div class="collapse navbar-collapse" id="navbarText"> 
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium"> 
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium gap-2"> 
             <li class="nav-item"><a class="nav-link text-dark" href="#home">Home</a></li> 
-            <li class="nav-item"><a class="nav-link text-dark" href="#service">Service</a></li> 
-            <li class="nav-item"><a class="nav-link text-dark" href="#portfolio">Portfolio</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#service">Services</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#portfolio">Works</a></li> 
             <li class="nav-item"><a class="nav-link text-dark" href="#resume">Resume</a></li> 
-            <li class="nav-item"><a class="nav-link text-dark" href="#hobby">Hobby</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#hobby">Interests</a></li> 
             <li class="nav-item"><a class="nav-link text-dark" href="#aboutme">About</a></li> 
-            <li class="nav-item"><a class="nav-link text-dark" href="#contactme">Contacts</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#contactme">Contact</a></li> 
           </ul> 
         </div> 
       </div> 
     </nav>
 
     <!-- 2. HERO / BANNER SECTION -->
-    <div id="home" class="container-fluid banner"> 
-        <div class="container text-center"> 
-          <p class="text-uppercase tracking-wider text-muted mb-2">Visual Communication Designer</p>
-          <h1 class="display-3 fw-bold mb-3">Peace be upon you.</h1>
-          <p class="lead text-white-50 mb-4">I'm Nabil Arash Rahim. If you know me, you know my story.</p>
-          <a href="#portfolio" class="btn btn-light btn-lg px-4 py-2 rounded-pill shadow-sm text-dark fw-medium">Explore Portfolio</a> 
+    <div id="home" class="container-fluid banner d-flex align-items-center"> 
+        <div class="container text-center py-5"> 
+          <p class="text-uppercase tracking-wider text-muted fw-bold mb-3" style="font-size: 0.85rem; letter-spacing: 0.2em;">Visual Communication & New Media Designer</p>
+          <h1 class="display-2 fw-bold mb-3" style="color: #ffffff;">Peace be upon you.</h1>
+          <h3 class="fw-normal mb-4 text-white-50" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem;">Translating complex ideas into functional, captivating visual stories.</h3>
+          <p class="mx-auto text-light opacity-75 mb-5" style="max-width: 600px;">I am Nabil Arash Bin Rahim, a designer specializing in bridging the gap between artistic graphic design, corporate identity positioning, and digital technology interactivity.</p>
+          <a href="#portfolio" class="btn btn-light btn-lg px-4 py-2 rounded-pill shadow-sm text-dark fw-semibold fs-6">View Selected Works</a> 
         </div> 
     </div>
 
     <!-- 3. SERVICES SECTION -->
     <div id="service" class="container section-padding">
       <div class="container text-center">
-        <h2 class="fw-bold mb-2">Services</h2>
-        <p class="text-muted mb-5">Professional creative solutions customized for your brand.</p>
+        <p class="text-uppercase tracking-wider text-muted fw-bold mb-2" style="font-size: 0.8rem;">Expertise</p>
+        <h2 class="fw-bold mb-3 display-5">Core Capabilities</h2>
+        <p class="text-muted mb-5 mx-auto" style="max-width: 650px;">Providing multi-disciplinary design and digital support to scale operations, clarify messaging, and refine digital interfaces.</p>
         
         <div class="row g-4 pt-2">
           <div class="col-md-4">
             <div class="lingkaran"><i class="fa-solid fa-code fa-2x"></i></div>
-            <h4 class="fw-semibold">Web Development</h4>
-            <p class="text-muted px-3">Modern, intuitive UI/UX designs transformed into clean, responsive web layouts.</p>
+            <h4 class="fw-semibold mb-3">UI/UX & Web Interaction</h4>
+            <p class="text-muted px-3 desc-text">Designing functional layouts and responsive web experiences. Specializing in semantic structuring, styling alignments, and clean front-end composition.</p>
           </div>
           <div class="col-md-4">
             <div class="lingkaran"><i class="fa-solid fa-palette fa-2x"></i></div>
-            <h4 class="fw-semibold">Graphic Design</h4>
-            <p class="text-muted px-3">Creating strong visual concepts to communicate ideas that inspire and captivate consumers.</p>
+            <h4 class="fw-semibold mb-3">Corporate Branding & Identity</h4>
+            <p class="text-muted px-3 desc-text">Crafting professional physical assets, environmental signage architectures, publication media, and corporate launch collateral that capture brand authority.</p>
           </div>
           <div class="col-md-4">
-            <div class="lingkaran"><i class="fa-solid fa-network-wired fa-2x"></i></div>
-            <h4 class="fw-semibold">Networking</h4>
-            <p class="text-muted px-3">Structured configuration, maintenance, and seamless optimization of connected environments.</p>
+            <div class="lingkaran"><i class="fa-solid fa-arrows-to-eye fa-2x"></i></div>
+            <h4 class="fw-semibold mb-3">Interactive Media Design</h4>
+            <p class="text-muted px-3 desc-text">Exploring the synthesis of graphic landscapes with new media, inclusive of multimedia assets, automation workflows, and interactive community frameworks.</p>
           </div>
         </div>
       </div>
@@ -123,69 +135,76 @@
     <!-- 4. PORTFOLIO SECTION -->
     <div id="portfolio" class="bg-dark text-white section-padding">
       <div class="container text-center">
-        <h2 class="fw-bold mb-2 text-white">Creative Portfolio</h2>
-        <p class="text-muted mb-5">A compilation of design artworks crafted with passion and precision.</p>
+        <p class="text-uppercase tracking-wider text-muted fw-bold mb-2" style="font-size: 0.8rem;">Case Studies</p>
+        <h2 class="fw-bold mb-2 text-white display-5">Selected Creative Works</h2>
+        <p class="text-muted mb-5">A targeted showcase displaying technical and spatial design engineering execution.</p>
         
         <div class="row g-4">
           <div class="col-md-4">
             <div class="card card-modern text-dark text-start">
-              <img src="images/img11.jpg" class="card-img-top" alt="Creative Photography" style="object-fit: cover; height: 250px;"/>
+              <img src="images/img11.jpg" class="card-img-top" alt="Creative Digital Photography" style="object-fit: cover; height: 250px;"/>
               <div class="card-body p-4">
-                <h5 class="fw-bold card-title">Creative Digital Photography</h5>
-                <p class="card-text text-muted small">Advanced photo manipulation and core visual compositions.</p>
+                <span class="text-uppercase text-muted fw-bold d-block mb-1" style="font-size: 0.75rem;">Digital Manipulation</span>
+                <h5 class="fw-bold card-title mb-2">Creative Digital Photography</h5>
+                <p class="card-text text-muted small">Conceptual photo manipulation focusing on surreal narrative frameworks, spatial depth, and technical color grading configurations.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-modern text-dark text-start">
-              <img src="images/img4.jpg" class="card-img-top" alt="Sublimation Design" style="object-fit: cover; height: 250px;"/>
+              <img src="images/img4.jpg" class="card-img-top" alt="Sublimation & Apparel Design" style="object-fit: cover; height: 250px;"/>
               <div class="card-body p-4">
-                <h5 class="fw-bold card-title">Sublimation Design</h5>
-                <p class="card-text text-muted small">Custom corporate apparel concepts and modern sportswear structure.</p>
+                <span class="text-uppercase text-muted fw-bold d-block mb-1" style="font-size: 0.75rem;">Apparel Identity</span>
+                <h5 class="fw-bold card-title mb-2">Sublimation Apparel Design</h5>
+                <p class="card-text text-muted small">Developing dynamic vector print paths for custom team identities, sportswear scaling blueprints, and modern material branding assets.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-modern text-dark text-start">
-              <img src="images/img12.jpg" class="card-img-top" alt="Launching Poster" style="object-fit: cover; height: 250px;"/>
+              <img src="images/img12.jpg" class="card-img-top" alt="Corporate Launch Poster" style="object-fit: cover; height: 250px;"/>
               <div class="card-body p-4">
-                <h5 class="fw-bold card-title">Launching Poster</h5>
-                <p class="card-text text-muted small">Strategic advertising material for high-impact project announcements.</p>
+                <span class="text-uppercase text-muted fw-bold d-block mb-1" style="font-size: 0.75rem;">Print & Advertising</span>
+                <h5 class="fw-bold card-title mb-2">Corporate Launch Campaign</h5>
+                <p class="card-text text-muted small">Designing complex marketing assets and promotional advertising print materials deployed across formal public launch events.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-modern text-dark text-start">
-              <img src="images/img10.jpg" class="card-img-top" alt="Event Poster" style="object-fit: cover; height: 250px;"/>
+              <img src="images/img10.jpg" class="card-img-top" alt="Typography Event Poster" style="object-fit: cover; height: 250px;"/>
               <div class="card-body p-4">
-                <h5 class="fw-bold card-title">Event Poster</h5>
-                <p class="card-text text-muted small">Integrating structural typography seamlessly into dynamic public layouts.</p>
+                <span class="text-uppercase text-muted fw-bold d-block mb-1" style="font-size: 0.75rem;">Typography Architecture</span>
+                <h5 class="fw-bold card-title mb-2">Event Poster Layouts</h5>
+                <p class="card-text text-muted small">Applying absolute visual hierarchies and structured typographical grids to maximize legible layout readability under high public densities.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-modern text-dark text-start">
-              <img src="images/img8.jpg" class="card-img-top" alt="Desktop Publishing" style="object-fit: cover; height: 250px;"/>
+              <img src="images/img8.jpg" class="card-img-top" alt="Desktop Publishing Curation" style="object-fit: cover; height: 250px;"/>
               <div class="card-body p-4">
-                <h5 class="fw-bold card-title">Desktop Publishing</h5>
-                <p class="card-text text-muted small">Professional print magazine layouts and premium editorial designs.</p>
+                <span class="text-uppercase text-muted fw-bold d-block mb-1" style="font-size: 0.75rem;">Editorial Systems</span>
+                <h5 class="fw-bold card-title mb-2">Desktop Publishing & Editorial</h5>
+                <p class="card-text text-muted small">Curating page distributions, layout compositions, and editorial image alignments for contemporary physical magazine architectures.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-modern text-dark text-start">
-              <img src="images/img7.jpg" class="card-img-top" alt="Digital Imaging" style="object-fit: cover; height: 250px;"/>
+              <img src="images/img7.jpg" class="card-img-top" alt="Digital Composite Poster" style="object-fit: cover; height: 250px;"/>
               <div class="card-body p-4">
-                <h5 class="fw-bold card-title">Digital Imaging</h5>
-                <p class="card-text text-muted small">Complex image stitching and dynamic lighting manipulations.</p>
+                <span class="text-uppercase text-muted fw-bold d-block mb-1" style="font-size: 0.75rem;">Composite Arts</span>
+                <h5 class="fw-bold card-title mb-2">Digital Imaging & Compositing</h5>
+                <p class="card-text text-muted small">Stitching multiple digital channels into clean thematic plates with dynamic lighting properties, edge blending, and advanced matte texturing.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Video Reel Wrapper -->
-        <div class="ratio ratio-16x9 mx-auto mt-5 shadow-lg rounded-3" style="max-width: 800px; overflow:hidden;">
-            <iframe src="https://www.youtube.com/embed/KS5bEcGVQ-0?autoplay=0&mute=1&loop=1" title="YouTube Showcase" allowfullscreen></iframe>
+        <!-- Video Reel Showcase Wrap -->
+        <div class="ratio ratio-16x9 mx-auto mt-5 shadow-lg rounded-4" style="max-width: 800px; overflow:hidden;">
+            <iframe src="https://www.youtube.com/embed/KS5bEcGVQ-0?autoplay=0&mute=1&loop=1" title="Multimedia Showcase Reel" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -193,57 +212,59 @@
     <!-- 5. RESUME SECTION -->
     <div id="resume" class="bg-light section-padding">
         <div class="container text-center" style="max-width: 850px;">
-            <h2 class="fw-bold mb-2">Curriculum Vitae</h2>
-            <p class="text-muted mb-4">My official professional qualifications and skills overview.</p>
+            <p class="text-uppercase tracking-wider text-muted fw-bold mb-2" style="font-size: 0.8rem;">Qualifications</p>
+            <h2 class="fw-bold mb-2 display-5">Curriculum Vitae</h2>
+            <p class="text-muted mb-4">Review my formal timeline, engineering skills, and system experience.</p>
             <div class="mb-4 text-end">
-                <a href="images/resume.jpg" download class="btn btn-outline-dark rounded-pill px-4 btn-sm fw-medium">
-                    <i class="fa-solid fa-download me-2"></i>Download CV (JPG)
+                <a href="images/resume.jpg" download class="btn btn-dark rounded-pill px-4 btn-sm fw-medium">
+                    <i class="fa-solid fa-download me-2"></i>Download Resume Asset
                 </a>
             </div>
-            <img src="images/resume.jpg" alt="Nabil Arash CV" class="resume-img img-fluid">
+            <img src="images/resume.jpg" alt="Nabil Arash Professional Resume" class="resume-img img-fluid">
         </div>
     </div>
 
-    <!-- 6. HOBBY SECTION -->
+    <!-- 6. HOBBY / PERSONAL INTERESTS SECTION -->
     <div id="hobby" class="container section-padding">
         <div class="container text-center">
-            <h2 class="fw-bold mb-2">My Hobbies</h2>
-            <p class="text-muted mb-5">How I spend my spare time recharging my creative energy.</p>
+            <p class="text-uppercase tracking-wider text-muted fw-bold mb-2" style="font-size: 0.8rem;">Lifestyle</p>
+            <h2 class="fw-bold mb-2 display-5">Personal Insights</h2>
+            <p class="text-muted mb-5">Creative drivers and personal projects that inform my out-of-the-box thinking style.</p>
             
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="card card-modern">
-                        <img src="images/img15.jpg" class="card-img-top" alt="Music" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-music text-secondary me-2"></i>Music</h5>
-                            <p class="desc-text mb-0">A personal retreat into rhythms and melodies. Music sets the mood and serves as the creative soundtrack to my life.</p>
+                        <img src="images/img15.jpg" class="card-img-top" alt="Melodic Composition Study" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-4 text-start">
+                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-music text-secondary me-2"></i>Music Curation</h5>
+                            <p class="desc-text mb-0 small text-muted">Analyzing rhythm patterns and melodic mood shifts. Music provides the foundational sonic backdrop for my design ideation sessions.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card card-modern">
-                        <img src="images/img13.jpg" class="card-img-top" alt="Football" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-futbol text-secondary me-2"></i>Football</h5>
-                            <p class="desc-text mb-0">The pure thrill of the game and teamwork. Stepping onto the pitch keeps me sharp, fast, and healthy.</p>
+                        <img src="images/img13.jpg" class="card-img-top" alt="Athletic Sports Teamwork" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-4 text-start">
+                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-futbol text-secondary me-2"></i>Football Sports</h5>
+                            <p class="desc-text mb-0 small text-muted">Building situational strategy, athletic endurance, and group coordination sync. Football instills high operational teamwork values.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card card-modern">
-                        <img src="images/img14.jpg" class="card-img-top" alt="Movies" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-film text-secondary me-2"></i>Movies</h5>
-                            <p class="desc-text mb-0">Immersing into diverse cinematic narratives. A wonderful portal to study screenplays and motion design.</p>
+                        <img src="images/img14.jpg" class="card-img-top" alt="Cinematic Analysis" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-4 text-start">
+                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-film text-secondary me-2"></i>Cinema Study</h5>
+                            <p class="desc-text mb-0 small text-muted">Dissecting narrative storytelling pacing, spatial lighting layouts, framing structures, and dynamic motion design keyframes.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card card-modern">
-                        <img src="images/img16.jpg" class="card-img-top" alt="Cooking" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-utensils text-secondary me-2"></i>Cooking</h5>
-                            <p class="desc-text mb-0">My culinary playground. Joyfully experimenting with diverse ingredient profiles, flavors, and presentation.</p>
+                        <img src="images/img16.jpg" class="card-img-top" alt="Culinary Presentation" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-4 text-start">
+                            <h5 class="fw-bold mb-2"><i class="fa-solid fa-utensils text-secondary me-2"></i>Culinary Arts</h5>
+                            <p class="desc-text mb-0 small text-muted">Exploring geometric composition setups, texture dynamics, and color palettes on a plate. An extension of design systems.</p>
                         </div>
                     </div>
                 </div>
@@ -256,20 +277,29 @@
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-md-4 text-center">
-                    <img src="images/icon.png" class="img-fluid rounded-4 shadow-sm" alt="Nabil Profile" style="max-height: 350px; object-fit: cover;" />
+                    <img src="images/icon.png" class="img-fluid rounded-4 shadow-sm" alt="Nabil Arash Profile Representation" style="max-height: 350px; object-fit: cover;" />
                 </div>
                 <div class="col-md-8">
-                    <h2 class="fw-bold mb-2">About Me</h2>
-                    <p class="text-muted mb-4">Get to know the person behind the creative canvas.</p>
+                    <p class="text-uppercase tracking-wider text-muted fw-bold mb-2" style="font-size: 0.8rem;">Profile Context</p>
+                    <h2 class="fw-bold mb-2 display-5">About Me</h2>
+                    <p class="text-muted mb-4">Bridging visual methodologies with new digital communication capabilities.</p>
                     
                     <div class="table-responsive">
                         <table class="table table-hover align-middle bg-white rounded-3 overflow-hidden shadow-sm">
                           <tbody>
-                            <tr><td class="fw-semibold py-3 px-4" style="width: 30%;">Name</td><td class="text-secondary py-3">Nabil Arash Bin Rahim</td></tr>
-                            <tr><td class="fw-semibold py-3 px-4">Course</td><td class="text-secondary py-3">Sarjana Muda Reka Bentuk Dalam Komunikasi Visual dan Media Baharu Dengan Kepujian</td></tr>
-                            <tr><td class="fw-semibold py-3 px-4">Session</td><td class="text-secondary py-3">4 : 2023/2024</td></tr>
-                            <tr><td class="fw-semibold py-3 px-4">E-mail</td><td class="text-secondary py-3"><a href="mailto:arashrahim.study@gmail.com" class="text-decoration-none text-dark border-bottom border-dark">arashrahim.study@gmail.com</a></td></tr>
-                            <tr><td class="fw-semibold py-3 px-4">Expertise</td><td class="text-secondary py-3"><span class="badge bg-dark-subtle text-dark px-3 py-2 rounded-pill">Visual Communication Design</span></td></tr>
+                            <tr><td class="fw-semibold py-3 px-4 text-muted" style="width: 25%;">Full Name</td><td class="text-dark fw-medium py-3">Nabil Arash Bin Rahim</td></tr>
+                            <tr><td class="fw-semibold py-3 px-4 text-muted">Specialization</td><td class="text-dark py-3">Sarjana Muda Reka Bentuk Dalam Komunikasi Visual dan Media Baharu Dengan Kepujian</td></tr>
+                            <tr><td class="fw-semibold py-3 px-4 text-muted">Academic Term</td><td class="text-dark py-3">Session 4 : 2023/2024</td></tr>
+                            <tr><td class="fw-semibold py-3 px-4 text-muted">Corporate Mail</td><td class="text-dark py-3"><a href="mailto:arashrahim.study@gmail.com" class="text-decoration-none border-bottom border-dark text-dark fw-medium">arashrahim.study@gmail.com</a></td></tr>
+                            <tr>
+                              <td class="fw-semibold py-3 px-4 text-muted">Design Stack</td>
+                              <td class="py-3">
+                                  <span class="tech-badge">Visual Communication</span>
+                                  <span class="tech-badge">Branding Development</span>
+                                  <span class="tech-badge">UI/UX Layouts</span>
+                                  <span class="tech-badge">Front-end Basics</span>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                     </div>
@@ -281,16 +311,16 @@
     <!-- 8. CONTACT ME SECTION -->
     <div id="contactme" class="kontak section-padding">
       <div class="container" style="max-width: 650px;">
-        <h2 class="fw-bold text-center mb-2 text-white">Contact Me</h2>
-        <p class="text-white-50 text-center mb-5">Have a project in mind? Drop a message below.</p>
+        <h2 class="fw-bold text-center mb-2 text-white display-5">Get In Touch</h2>
+        <p class="text-white-50 text-center mb-5">Let's discuss branding deployments, web layouts, or project collaborations.</p>
         
         <form class="row g-3">
-          <div class="col-10 mx-auto">
-            <div class="mb-3"><input type="text" class="form-control form-control-lg fs-6" placeholder="Nama"></div>
-            <div class="mb-3"><input type="email" class="form-control form-control-lg fs-6" placeholder="Email"></div>
-            <div class="mb-3"><input type="text" class="form-control form-control-lg fs-6" placeholder="No. Phone"></div>
-            <div class="mb-4"><textarea class="form-control form-control-lg fs-6" placeholder="Tulis mesej anda di sini..." rows="4"></textarea></div>
-            <div class="text-center"><button type="submit" class="btn btn-light btn-lg px-5 py-2 rounded-pill fw-medium text-dark">Send Message</button></div>
+          <div class="col-11 mx-auto">
+            <div class="mb-3"><input type="text" class="form-control form-control-lg fs-6" placeholder="Your Name"></div>
+            <div class="mb-3"><input type="email" class="form-control form-control-lg fs-6" placeholder="Your Professional Email"></div>
+            <div class="mb-3"><input type="text" class="form-control form-control-lg fs-6" placeholder="Contact Number"></div>
+            <div class="mb-4"><textarea class="form-control form-control-lg fs-6" placeholder="Outline your project scope or inquiries here..." rows="4"></textarea></div>
+            <div class="text-center"><button type="submit" class="btn btn-light btn-lg px-5 py-2 rounded-pill fw-semibold text-dark fs-6">Submit Inquiry</button></div>
           </div>
         </form>
       </div>
@@ -298,14 +328,18 @@
 
     <!-- 9. FOOTER -->
     <footer class="bg-white py-5 text-center border-top">
-        <p class="text-muted small mb-0">Nabil Arash Rahim &copy; 2024. All Rights Reserved.</p>
+        <div class="mb-3">
+            <a href="https://www.linkedin.com/in/nabilarashrahim/" target="_blank" class="text-dark mx-2 fs-5 opacity-75 hover-opacity-100"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p class="text-muted small mb-0">Nabil Arash Rahim &copy; 2024. Portfolio System Hub. All Rights Reserved.</p>
     </footer>
 
-    <!-- FLOATING ELEMENTS (Media Sosial & Button Top) -->
+    <!-- FLOATING SIDE ELEMENTS -->
     <div class="icon-bar">
       <a href="https://facebook.com/nabilarashrahim" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
       <a href="https://twitter.com/arashrahim_" target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
       <a href="https://www.youtube.com/@NabilArashRahim" target="_blank" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/in/nabilarashrahim/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
     </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
