@@ -1,342 +1,332 @@
-<link rel="icon" type="image/x-icon" href="/images/iconweb.png">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Portfolio | Nabil Arash</title>
+    <link rel="icon" type="image/x-icon" href="/images/iconweb.png">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"/>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link 
-      rel="stylesheet" 
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-      crossorigin="anonymous" 
-    />
+    <!-- Bootstrap 5.3.3 cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome 6 (Lebih Moden) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css" />
-    <script>
-      document.getElementById("demo").innerHTML = "My First JavaScript";
-      </script>
+    
+    <style>
+        /* Tambahan CSS dalaman untuk memastikan gaya moden & minimalis berfungsi terus */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: #2D3748;
+            background-color: #f8f9fa;
+        }
+        .navbar-modern {
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .banner {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 180px 0 120px 0;
+        }
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            color: #4A5568;
+        }
+        .card-modern {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            background: #ffffff;
+        }
+        .card-modern:hover {
+            transform: translateY(-5px);
+        }
+        .section-padding {
+            padding: 100px 0;
+        }
+        .table-modern th {
+            font-weight: 600;
+            background-color: #f1f3f5;
+        }
+        .social-links a {
+            color: #4A5568;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: #000000;
+        }
+        #myBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #2D3748;
+            color: white;
+            cursor: pointer;
+            padding: 12px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="/sounds/music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-    <nav 
-      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top" 
-    > 
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-modern"> 
       <div class="container"> 
-        <a class="navbar-brand" href="#">NabilArashRahim.</a> 
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarText" 
-          aria-controls="navbarText" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation" 
-        > 
+        <a class="navbar-brand fw-bold" href="#">NabilArash.</a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> 
           <span class="navbar-toggler-icon"></span> 
         </button> 
-        <div class="collapse navbar-collapse text-right" id="navbarText"> 
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
-            <li class="nav-item"> 
-              <a class="nav-link" href="#service">Service</a> 
-            </li> 
-            <li class="nav-item"> 
-              <a class="nav-link" href="#portfolio">Portfolio</a> 
-            </li> 
-            <li class="nav-item"> 
-              <a class="nav-link" href="#aboutme">About</a> 
-            </li> 
-            <li class="nav-item"> 
-              <a class="nav-link" href="hobby.html">Hobby</a> 
-            <li class="nav-item"> 
-              <a class="nav-link" href="resume.html">Resume</a> 
-            <li class="nav-item"> 
-              <a class="nav-link" href="#contactme">Contacts</a> 
-            </li> 
-           </ul> 
+        <div class="collapse navbar-collapse" id="navbarText"> 
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium"> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#service">Service</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#portfolio">Portfolio</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#aboutme">About</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="hobby.html">Hobby</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="resume.html">Resume</a></li> 
+            <li class="nav-item"><a class="nav-link text-dark" href="#contactme">Contacts</a></li> 
+          </ul> 
         </div> 
       </div> 
     </nav>
-    <!--Banner-->
+
+    <!-- Banner / Hero Section -->
     <div class="container-fluid banner"> 
         <div class="container text-center"> 
-          <h1 class="display-6">Welcome to my website.</h1> 
-          <h2 class="display-1">Peace be upon you.</h2>
-          <h3>If you know me, you know my story.</h3>
-          <p>I'am Nabil Arash Rahim.</p>
-          <a href="#service"> 
-            <button type="button" class="btn btn-light"> 
-              CLICK HERE TO EXPLORE 
-            </button> 
-          </a> 
+          <p class="text-uppercase tracking-wider text-muted mb-2">Hello & Welcome</p>
+          <h1 class="display-3 fw-bold mb-3">Peace be upon you.</h1>
+          <p class="lead text-secondary mb-4">I'm Nabil Arash Rahim. If you know me, you know my story.</p>
+          <a href="#service" class="btn btn-dark btn-lg px-4 py-2 rounded-pill shadow-sm">Explore My Work</a> 
         </div> 
-      </div>
-    <!-- Service -->
-    <div class="container-fluid service pt-5 pb-5">
-      <div class="container text-center">
-        <h2 class="display-3" id="service">Service</h2>
-        <p>
-          Here are my services I offer.
-        </p>
-        <!--Web Development-->
-        <div class="row pt-4">
-          <div class="col-md-4">
-            <!--awesome font letak sini-->
-            <span class="lingkaran"><i class="fas fa-code fa-5x"></i></span>
-            <h3 class="mt-3">Web Development</h3>
-            <p>
-              UI/UX Design
-            </p>
-          </div>
-          <!--Design-->
-          <div class="col-md-4">
-            <!--awesome font letak sini-->
-            <span class="lingkaran"><i class="fas fa-palette fa-5x"></i></span>
-            <h3 class="mt-3">Design</h3>
-            <p>
-              Create visual concepts to communicate ideas that inspire, inform, and captivate consumers.
-            </p>
-          </div>
-          <!--Networking-->
-          <div class="col-md-4">
-            <!--awesome font letak sini-->
-            <span class="lingkaran"
-              ><i class="fas fa-network-wired fa-5x"></i
-            ></span>
-            <h3 class="mt-3">Networking</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat,
-              a!
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
-    <!-- portfolio -->
-    <div class="container-fluid pt-5 pb-5 bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="display-3" id="portfolio">Portfolio</h2>
-        <p>
-          This is the result of the work I have produced throughout my time as a Graphic Designer.
-        </p>
-        <div class="row pt-4 gx-4 gy-4">
-          <div class="col-md-4">
-            <!--Card dari bootstrap-->
-            <div class="card crop-img">
-              <img
-                src="images/img11.jpg"
-                class="card-img-top"
-                width="420"
-                height="420"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Creative Digital Photography</h5>
-                  <p class="card-text">
-                    Photo manipulation.
-                  </p>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-md-4">
-              <div class="card crop-img">
-                <img
-                  src="images/img4.jpg"
-                  class="card-img-top"
-                  width="420"
-                  height="420"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Sublimation Design</h5>
-                  <p class="card-text">
-                    Designing apparel.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card crop-img">
-                <img
-                  src="images/img12.jpg"
-                  class="card-img-top"
-                  width="420"
-                  height="420"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Launching Poster</h5>
-                  <p class="card-text">
-                    For Graphic Design Project, Advertising poster.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card crop-img">
-                <img
-                  src="images/img10.jpg"
-                  class="card-img-top"
-                  width="420"
-                  height="420"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Event Poster</h5>
-                  <p class="card-text">
-                    Apply creative typography to the poster.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card crop-img">
-                <img
-                  src="images/img8.jpg"
-                  class="card-img-top"
-                  width="420"
-                  height="420"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Desktop Publishing</h5>
-                  <p class="card-text">
-                    Designing magazine.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card crop-img">
-                <img
-                  src="images/img7.jpg"
-                  class="card-img-top"
-                  width="420"
-                  height="420"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Digital Imaging</h5>
-                  <p class="card-text">
-                    Manipulation images to create a poster.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <iframe width="1280" height="720" class="center"
-      src="https://www.youtube.com/embed/KS5bEcGVQ-0?autoplay=1&mute=1&loop=1&controls=0">
-      </iframe>
-  
-      <!-- Aboutme class="col-md-6 float-md-end mb-3 crop-img" -->
-      
-      <div class="container-fluid pt-5 pb-5">
-        <div class="container">
-          <h2 class="display-3 text-center" id="aboutme">About Me</h2>
-          <p class="text-center">
-            Hi everyone! Here is information about myself
-          </p>
-          <div class="clearfix pt-5">
-            <img
-              src="images/icon.png"
-              class="col-md-4  crop-img center"
-              width="240"
-              height="340"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <h2>About Me</h2>
-        <p>Here is biodata information about myself</p>            
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Details</th>
-              <th>Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Name</td>
-              <td>Nabil Arash Bin Rahim</td>
-            </tr>
-            <tr>
-              <td>Course</td>
-              <td>Sarjana Muda Reka Bentuk Dalam Komunikasi Visual dan Media Baharu Dengan Kepujian</td>
-            </tr>
-            <tr>
-              <td>Session</td>
-              <td>4 : 2023/2024</td>
-            </tr>
-            <td>E-mail</td>
-            <td>arashrahim.study@gmail.com</td>
-            <tr>
-            <td>Expertise</td>
-            <td>Graphic Design</td>
-          </tbody>
-        </table>
-      </div>
-     
-    <!-- Contact ME -->
-    <div class="container-fluid pt-5 pb-5 kontak">
-      <div class="container">
-        <h2 class="display-3 text-center" id="contactme">Contact Me</h2>
-        <p class="text-center">
-          Can contact me by filling in your information.
-        </p>
-        <div class="row pb-3">
-          <div class="col-md-6">
-            <input
-              class="form-control form-control-lg mb-3"
-              type="text"
-              placeholder="Nama"
-            />
-            <input
-              class="form-control form-control-lg mb-3"
-              type="text"
-              placeholder="Email"
-            />
-            <input
-              class="form-control form-control-lg"
-              type="text"
-              placeholder="No. Phone"
-            />
-          </div>
-          <div class="col-md-6">
-            <textarea class="form-control form-control-lg" rows="5"></textarea>
-          </div>
-        </div>
-        <div class="col-md-3 mx-auto text-center">
-          <button type="button" class="btn btn-light">
-            Send
-          </button>
-        </div>
-      </div>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- The social media icon bar -->
-      <div class="icon-bar">
-      <a href="https://facebook.com/nabilarashrahim" class="facebook"><i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/arashrahim_" class="twitter"><i class="fa fa-twitter"></i></a>
-      <a href="https://www.youtube.com/@NabilArashRahim" class="youtube"><i class="fa fa-youtube"></i></a>
-</div>
-    <div class="container text-center pt-5 pb-5">
-      Nabil Arash Rahim &copy; 2024
+    <!-- Service Section -->
+    <div id="service" class="container section-padding">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-2">Services</h2>
+        <p class="text-muted mb-5">Here are the professional services I offer.</p>
+        
+        <div class="row g-4 pt-2">
+          <!-- Web Development -->
+          <div class="col-md-4">
+            <div class="service-icon"><i class="fa-solid fa-code fa-2x"></i></div>
+            <h4 class="fw-semibold">Web Development</h4>
+            <p class="text-muted px-3">UI/UX Design and creating modern, responsive, and pixel-perfect web experiences.</p>
+          </div>
+          <!-- Design -->
+          <div class="col-md-4">
+            <div class="service-icon"><i class="fa-solid fa-palette fa-2x"></i></div>
+            <h4 class="fw-semibold">Graphic Design</h4>
+            <p class="text-muted px-3">Creating visual concepts to communicate ideas that inspire, inform, and captivate audiences.</p>
+          </div>
+          <!-- Networking -->
+          <div class="col-md-4">
+            <div class="service-icon"><i class="fa-solid fa-network-wired fa-2x"></i></div>
+            <h4 class="fw-semibold">Networking</h4>
+            <p class="text-muted px-3">Setting up structure, optimization, and maintaining reliable network communications.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio" class="bg-dark text-white section-padding">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-2 text-white">Portfolio</h2>
+        <p class="text-muted mb-5">A curated selection of works produced throughout my creative journey.</p>
+        
+        <div class="row g-4">
+          <!-- Item 1 -->
+          <div class="col-md-4">
+            <div class="card card-modern text-dark text-start">
+              <img src="images/img11.jpg" class="card-img-top" alt="Creative Photography" style="object-fit: cover; height: 260px;"/>
+              <div class="card-body p-4">
+                <h5 class="fw-bold card-title">Creative Digital Photography</h5>
+                <p class="card-text text-muted small">Advanced photo manipulation and conceptual art.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-md-4">
+            <div class="card card-modern text-dark text-start">
+              <img src="images/img4.jpg" class="card-img-top" alt="Sublimation Design" style="object-fit: cover; height: 260px;"/>
+              <div class="card-body p-4">
+                <h5 class="fw-bold card-title">Sublimation Design</h5>
+                <p class="card-text text-muted small">Custom apparel design and modern sportswear branding.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="col-md-4">
+            <div class="card card-modern text-dark text-start">
+              <img src="images/img12.jpg" class="card-img-top" alt="Launching Poster" style="object-fit: cover; height: 260px;"/>
+              <div class="card-body p-4">
+                <h5 class="fw-bold card-title">Launching Poster</h5>
+                <p class="card-text text-muted small">Advertising material for high-impact graphic design projects.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="col-md-4">
+            <div class="card card-modern text-dark text-start">
+              <img src="images/img10.jpg" class="card-img-top" alt="Event Poster" style="object-fit: cover; height: 260px;"/>
+              <div class="card-body p-4">
+                <h5 class="fw-bold card-title">Event Poster</h5>
+                <p class="card-text text-muted small">Application of creative typography in public layouts.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="col-md-4">
+            <div class="card card-modern text-dark text-start">
+              <img src="images/img8.jpg" class="card-img-top" alt="Desktop Publishing" style="object-fit: cover; height: 260px;"/>
+              <div class="card-body p-4">
+                <h5 class="fw-bold card-title">Desktop Publishing</h5>
+                <p class="card-text text-muted small">Magazine layout curation and editorial graphic prints.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="col-md-4">
+            <div class="card card-modern text-dark text-start">
+              <img src="images/img7.jpg" class="card-img-top" alt="Digital Imaging" style="object-fit: cover; height: 260px;"/>
+              <div class="card-body p-4">
+                <h5 class="fw-bold card-title">Digital Imaging</h5>
+                <p class="card-text text-muted small">Image manipulation techniques structured for cinema/posters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Container Moden -->
+        <div class="ratio ratio-16x9 mx-auto mt-5 shadow-lg rounded-3" style="max-width: 800px; overflow:hidden;">
+            <iframe src="https://www.youtube.com/embed/KS5bEcGVQ-0?autoplay=0&mute=1&loop=1" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="aboutme" class="container section-padding">
+        <div class="row align-items-center g-5">
+            <div class="col-md-4 text-center">
+                <img src="images/icon.png" class="img-fluid rounded-4 shadow-sm" alt="Nabil Profile" style="max-height: 380px; object-fit: cover;" />
+            </div>
+            <div class="col-md-8">
+                <h2 class="fw-bold mb-2">About Me</h2>
+                <p class="text-muted mb-4">Hi everyone! Here is a little snippet of my background and professional journey.</p>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover table-modern align-middle">
+                      <tbody>
+                        <tr>
+                          <td class="fw-semibold py-3" style="width: 30%;">Name</td>
+                          <td class="text-secondary py-3">Nabil Arash Bin Rahim</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-semibold py-3">Course</td>
+                          <td class="text-secondary py-3">Sarjana Muda Reka Bentuk Dalam Komunikasi Visual dan Media Baharu Dengan Kepujian</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-semibold py-3">Session</td>
+                          <td class="text-secondary py-3">4 : 2023/2024</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-semibold py-3">E-mail</td>
+                          <td class="text-secondary py-3"><a href="mailto:arashrahim.study@gmail.com" class="text-decoration-none text-dark border-bottom border-dark">arashrahim.study@gmail.com</a></td>
+                        </tr>
+                        <tr>
+                          <td class="fw-semibold py-3">Expertise</td>
+                          <td class="text-secondary py-3"><span class="badge bg-secondary-subtle text-secondary-emphasis px-3 py-2 rounded-pill">Graphic Design</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <!-- Contact Me Section -->
+    <div id="contactme" class="bg-light section-padding">
+      <div class="container" style="max-width: 700px;">
+        <h2 class="fw-bold text-center mb-2">Contact Me</h2>
+        <p class="text-muted text-center mb-5">Feel free to reach out by filling in the details below.</p>
+        
+        <form class="row g-3">
+          <div class="col-md-10 mx-auto">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="inputNama" placeholder="Nama">
+              <label for="inputNama">Nama</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <label for="inputEmail">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="inputPhone" placeholder="No. Phone">
+              <label for="inputPhone">No. Telefon</label>
+            </div>
+            <div class="form-floating mb-4">
+              <textarea class="form-control" placeholder="Mesej anda" id="inputMesej" style="height: 120px"></textarea>
+              <label for="inputMesej">Mesej Anda</label>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark btn-lg px-5 py-2 rounded-pill">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white py-5 text-center border-top">
+        <div class="social-links mb-4">
+          <a href="https://facebook.com/nabilarashrahim" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/arashrahim_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.youtube.com/@NabilArashRahim" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="text-muted small mb-0">Nabil Arash Rahim &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // Fungsi Butang Kembali ke Atas (Back to top)
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        function topFunction() {
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 </body>
 </html>
