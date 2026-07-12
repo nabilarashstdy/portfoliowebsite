@@ -1,19 +1,22 @@
-// Get the button:
-let mybutton = document.getElementById("myBtn");
+// Mengisytiharkan butang "Back to Top"
+const mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// Mengesan aktiviti skrol pengguna menggunakan Event Listener
+window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  // Butang muncul hanya selepas skrol melebihi 300px ke bawah
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Fungsi untuk skrol naik ke atas secara lancar (smooth)
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
