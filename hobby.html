@@ -1,119 +1,169 @@
-<link rel="icon" type="image/x-icon" href="/images/iconweb.png">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Portfolio | Nabil Arash</title>
+    <title>My Hobbies | Nabil Arash</title>
+    <link rel="icon" type="image/x-icon" href="/images/iconweb.png">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"/>
-
-    <link 
-      rel="stylesheet" 
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-      crossorigin="anonymous" 
-    />
+    <!-- Bootstrap 5.3.3 cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css" />
+    
+    <style>
+        /* Memastikan stail moden & minimalis daripada halaman utama kekal konsisten */
+        body {
+            font-family: 'Mendoza', system-ui, -apple-system, sans-serif;
+            color: #2D3748;
+            background-color: #ffffff;
+        }
+        .navbar-modern {
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .banner { 
+            background: linear-gradient(rgba(22, 24, 23, 0.65), rgba(22, 24, 23, 0.65)), url("images/bg2.jpg") no-repeat center center; 
+            background-size: cover; 
+            padding-top: 160px; 
+            padding-bottom: 120px; 
+            color: #fff; 
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .card-modern {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+            height: 100%;
+        }
+        .card-modern:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        .card-modern img {
+            object-fit: cover;
+            height: 240px;
+            transition: transform 0.5s ease;
+        }
+        .card-modern:hover img {
+            transform: scale(1.03);
+        }
+        .desc-text {
+            font-size: 0.925rem;
+            color: #6c757d;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="/sounds/music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-    <nav 
-      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top" 
-    > 
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-modern"> 
       <div class="container"> 
-        <a class="navbar-brand" href="#">NabilArashRahim.</a> 
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarText" 
-          aria-controls="navbarText" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation" 
-        > 
+        <a class="navbar-brand fw-bold" href="index.html">NabilArash.</a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> 
           <span class="navbar-toggler-icon"></span> 
         </button> 
-        <div class="collapse navbar-collapse text-right" id="navbarText"> 
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
-            <li class="nav-item"> 
-              <a class="nav-link" href="index.html">Home</a> 
-            </li> 
-           </ul> 
+        <div class="collapse navbar-collapse" id="navbarText"> 
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium"> 
+            <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li> 
+          </ul> 
         </div> 
       </div> 
     </nav>
-    <!--Banner-->
+
+    <!-- Banner / Hero Section -->
     <div class="container-fluid banner"> 
         <div class="container text-center"> 
-          <h1 class="display-6">Welcome to my website.</h1> 
-          <h2 class="display-1">Peace be upon you.</h2>
-          <h3>If you know me, you know my story.</h3>
-          <p>I'am Nabil Arash Rahim.</p>
+          <p class="text-uppercase tracking-wider text-muted mb-2">Discover My Passion</p>
+          <h1 class="display-3 fw-bold mb-3">My Hobbies</h1>
+          <p class="lead text-white-50 mb-0">What I love to do in my spare time to stay creative and inspired.</p>
         </div> 
     </div>
 
-      <div class="container text-center"> 
-      <h2 class="mt-3 mb-3">MY HOBBY</h2>
-    <!--Image gallery-->
-      <div class="responsive">
-        <ul class="m-auto">
-        <div class="gallery">
-           <a target="_blank" href="images/img15.jpg">
-            <img src="images/img15.jpg" alt="Cinque Terre">
-          </a>
-          <div class="desc">Listening to music is my cherished hobby. It's my personal retreat into a world of melodies, rhythms, and emotions. Whether I'm relaxing at home, commuting, or out for a walk, music accompanies me, setting the mood and enhancing every moment. From upbeat tunes that lift my spirits to soulful melodies that resonate deeply, each song becomes a soundtrack to my life, evoking memories and emotions. It's a simple pleasure that brings me comfort, joy, and endless inspiration.</div>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <ul class="m-auto">
-        <div class="gallery">
-          <a target="_blank" href="images/img13.jpg">
-            <img src="images/img13.jpg" alt="Forest">
-          </a>
-          <div class="desc">Playing football is my favorite hobby. It's all about the thrill of running across the field, kicking the ball, and scoring goals. Whether it's a casual kickabout with friends or a competitive match, the rush of adrenaline and the joy of teamwork always make it an exciting experience. It keeps me active, improves my skills, and most importantly, brings a smile to my face every time I step onto the pitch.</div>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <ul class="m-auto">
-        <div class="gallery">
-          <a target="_blank" href="images/img14.jpg">
-            <img src="images/img14.jpg" alt="Northern Lights">
-          </a>
-          <div class="desc">My hobby is watching movies and dramas. It's a delightful escape into captivating stories and characters, where every scene unfolds like a new adventure. Whether I'm laughing, crying, or on the edge of my seat, the screen becomes my portal to different worlds and emotions. It's a relaxing and enjoyable pastime that allows me to unwind and immerse myself in captivating narratives, all from the comfort of my own home.</div>
-        </div>
-      </div>
-      
-      <div class="responsive">
-        <ul class="m-auto">
-        <div class="gallery">
-          <a target="_blank" href="images/img16.jpg">
-            <img src="images/img16.jpg" alt="Mountains">
-          </a>
-          <div class="desc">Cooking is my passion and pastime. It's where I find joy in creating delectable dishes, experimenting with flavors, and sharing my culinary creations with others. Whether I'm following a recipe or improvising, the kitchen is my playground where I express myself through food. It's a hobby that not only nourishes the body but also feeds my soul with creativity and satisfaction.
-          </div>
-        </div>
-      </div>
-      
-      <div class="clearfix"></div>
+    <!-- Hobbies Grid Section -->
+    <div class="container section-padding">
+        <div class="row g-4">
+            
+            <!-- Hobby 1: Music -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-modern">
+                    <a target="_blank" href="images/img15.jpg" class="overflow-hidden">
+                        <img src="images/img15.jpg" class="card-img-top" alt="Listening to Music">
+                    </a>
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3"><i class="fa-solid fa-music me-2 text-secondary"></i>Music</h5>
+                        <p class="desc-text mb-0">
+                            Listening to music is my cherished hobby. It's my personal retreat into a world of melodies, rhythms, and emotions. Whether I'm relaxing at home, commuting, or out for a walk, music accompanies me, setting the mood and enhancing every moment. From upbeat tunes that lift my spirits to soulful melodies that resonate deeply, each song becomes a soundtrack to my life.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="container text-center pt-5 pb-5">
-      Nabil Arash Rahim &copy; 2024
+            <!-- Hobby 2: Football -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-modern">
+                    <a target="_blank" href="images/img13.jpg" class="overflow-hidden">
+                        <img src="images/img13.jpg" class="card-img-top" alt="Playing Football">
+                    </a>
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3"><i class="fa-solid fa-futbol me-2 text-secondary"></i>Football</h5>
+                        <p class="desc-text mb-0">
+                            Playing football is my favorite hobby. It's all about the thrill of running across the field, kicking the ball, and scoring goals. Whether it's a casual kickabout with friends or a competitive match, the rush of adrenaline and the joy of teamwork always make it an exciting experience. It keeps me active, improves my skills, and brings a smile to my face every time I step onto the pitch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobby 3: Movies & Dramas -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-modern">
+                    <a target="_blank" href="images/img14.jpg" class="overflow-hidden">
+                        <img src="images/img14.jpg" class="card-img-top" alt="Watching Movies">
+                    </a>
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3"><i class="fa-solid fa-film me-2 text-secondary"></i>Movies & Dramas</h5>
+                        <p class="desc-text mb-0">
+                            My hobby is watching movies and dramas. It's a delightful escape into captivating stories and characters, where every scene unfolds like a new adventure. Whether I'm laughing, crying, or on the edge of my seat, the screen becomes my portal to different worlds and emotions. It's a relaxing and enjoyable pastime that allows me to unwind and immerse myself in stories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobby 4: Cooking -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-modern">
+                    <a target="_blank" href="images/img16.jpg" class="overflow-hidden">
+                        <img src="images/img16.jpg" class="card-img-top" alt="Cooking">
+                    </a>
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3"><i class="fa-solid fa-utensils me-2 text-secondary"></i>Cooking</h5>
+                        <p class="desc-text mb-0">
+                            Cooking is my passion and pastime. It's where I find joy in creating delectable dishes, experimenting with flavors, and sharing my culinary creations with others. Whether I'm following a recipe or improvising, the kitchen is my playground where I express myself through food. It's a hobby that not only nourishes the body but also feeds my soul with creativity and satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
-      
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 text-center border-top">
+        <p class="text-muted small mb-0">Nabil Arash Rahim &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (v5.3.3) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
