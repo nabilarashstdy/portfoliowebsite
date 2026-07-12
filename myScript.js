@@ -3,22 +3,39 @@
 // ==========================================================================
 const mybutton = document.getElementById("myBtn");
 const navbar = document.querySelector(".navbar-modern");
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+const navbarCollapse = document.querySelector(".navbar-collapse");
 
 // ==========================================================================
-// 2. EVENT LISTENER & FUNGSI SKROL UTAMA
+// 2. EVENT LISTENERS
 // ==========================================================================
+// Mengesan aktiviti skrol pengguna
 window.addEventListener('scroll', () => {
   handleBackToTopButton();
   handleNavbarStyles();
 });
 
+// Mengesan klik pada menu navigasi untuk fungsi auto-close pada mobile
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Semak jika menu sedang terbuka di paparan mobile menggunakan Bootstrap utility
+    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+      // Trigger klik pada butang toggler untuk menutup menu secara automatik
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      if (navbarToggler) navbarToggler.click();
+    }
+  });
+});
+
+// ==========================================================================
+// 3. FUNGSI SKROL UTAMA
+// ==========================================================================
 /**
  * Fungsi untuk memaparkan/menyembunyikan butang "Back to Top"
  */
 function handleBackToTopButton() {
   const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
   
-  // Butang muncul hanya selepas skrol melebihi 300px ke bawah
   if (scrollPosition > 300) {
     mybutton.style.display = "block";
   } else {
@@ -28,26 +45,23 @@ function handleBackToTopButton() {
 
 /**
  * Fungsi untuk menukar stail Navbar secara dinamik semasa skrol
- * Memberikan impak UI yang lebih premium dan hidup
  */
 function handleNavbarStyles() {
-  if (!navbar) return; // Mengelakkan ralat sekiranya elemen navbar tiada
+  if (!navbar) return;
 
   const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
   
   if (scrollPosition > 50) {
-    // Apabila skrol ke bawah, tambah bayang-bayang dan kurangkan ketelusan sedikit
     navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.08)";
     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
   } else {
-    // Kembali kepada keadaan asal di bahagian paling atas (Hero section)
     navbar.style.boxShadow = "none";
     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.85)";
   }
 }
 
 // ==========================================================================
-// 3. FUNGSI INTERAKSI KLIK (ACTION FUNCTIONS)
+// 4. FUNGSI INTERAKSI KLIK (ACTION FUNCTIONS)
 // ==========================================================================
 /**
  * Fungsi untuk skrol naik ke atas secara lancar (smooth scroll)
